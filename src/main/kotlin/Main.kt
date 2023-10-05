@@ -1,6 +1,16 @@
 fun main(args: Array<String>) {
-    val n1 = readLine()?.toInt()
-    val n2 = readLine()?.toInt()
+    val n1 = readln()
+    val n2 = readln()
 
-    println("X = ${n1!! + n2!!}")
+    println(sumOfList(n1))
+    println(sumOfList(n2))
+}
+
+fun sumOfList(numeros: String) : Int {
+    var  result = 0
+    numeros.split(" ").toList().forEach {
+        result += it.toInt()
+    }
+
+    return result
 }
